@@ -1,4 +1,4 @@
-Use this template to create new prototypes in DWP. This template is updated with every major version release of the GOVUK prototype kit. 
+A central design space for all the custom component on the garage. Main use is for a guide on how to use these components in our prototypes but can be used as devs for reference if need be.
 
 Support
 
