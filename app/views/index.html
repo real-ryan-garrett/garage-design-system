@@ -5,20 +5,28 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+  <!-- NAVIGATION -->
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+  <div class="govuk-grid-column-one-quarter">
+    <ul class="app-subnav__section">
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/loading-spinner">Loading spinner</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Multiple file upload</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">Service header</a>
+      </li>
+    </ul>
+  </div>
 
+  <!-- CONTENT -->
 
-      {{ govukButton({
-          text: "Continue",
-          href: "example/where-do-you-live"
-        }) }}
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-l">Components</h1>
+    <p class="govuk-body">[Content]</p>
   </div>
 </div>
 

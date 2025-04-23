@@ -3,4 +3,126 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 // 
 
-// Add extra styles here
+// STRUCTURE STYLING
+
+.govuk-header--no-border {
+    border-bottom: none;
+}
+
+.app-subnav {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.app-subnav__section {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.app-subnav__section-item {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.app-subnav__link {
+    padding: 2px 0;
+}
+
+.app-subnav__section-item--current {
+    margin-left: -14px;
+    padding-left: 10px;
+    border-left: 4px solid #1d70b8;
+    background-color: #fff;
+}
+
+.app-subnav__section-item--current .app-subnav__link {
+    font-weight: bold;
+}
+
+.header--no-border {
+    border-bottom: none;
+    padding: 10px 0;
+}
+
+.govuk-details__text {
+    border-top: 1px #b1b4b6 solid;
+    border-bottom: 1px #b1b4b6 solid;
+    border-right: 1px #b1b4b6 solid;
+    background-color: #f3f2f1;
+}
+
+pre { 
+    overflow-x: auto;
+    margin: 0;
+}
+
+
+// SPINNER STYLING
+
+.loading {
+    border: 12px solid #DEE0E2;
+    border-radius: 50%;
+    border-top-color: #005EA5;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    &-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    &-text {
+        margin-top: 25px;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+// MULTIPLE FILE UPLOAD
+
+.govuk-multi-file-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #505a5f;
+    text-align: center;
+    height: 250px;
+
+    &-list {
+        list-style-type: none;
+        padding: 0;
+
+        &-item {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            border-bottom: 1px solid #b1b4b6;
+
+            & > *:first-child {
+                margin-right: auto;
+            }
+        }
+    }
+
+    &.dragover {
+        background-color: #e8f4f9;
+    }
+}

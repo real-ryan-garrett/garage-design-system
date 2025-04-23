@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Loading spinner" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <!-- NAVIGATION -->
+
+  <div class="govuk-grid-column-one-quarter">
+    <ul class="app-subnav__section">
+      <li class="app-subnav__section-item app-subnav__section-item--current">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/loading-spinner">Loading spinner</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/multi-file-upload">Multiple file upload</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/service-header">Service header</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="govuk-grid-column-three-quarters">
+    <span class="govuk-caption-l">Components</span>
+    <h1 class="govuk-heading-l">Loading spinner</h1>
+    <br/>
+    <p class="govuk-body">
+      Although the loading spinner is a Home Office component, installing the Home Office library into the prototype kit introduces too many bugs 
+      resulting in multiple broken GDS components. If you wish to include the loading spinner component in the prototype kit, its best to recreate it.
+    </p>
+    <!-- Component -->
+    <div class="loading-container">
+      <div class="loading" aria-live="polite" role="status"></div>
+      <p class="govuk-body loading-text">Please wait while we load details</p>
+    </div>
+    <br />
+    <!-- HTML -->
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          HTML
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+<pre>
+<code>
+&#x3C;div class=&#x22;loading-container&#x22;&#x3E;
+  &#x3C;div class=&#x22;loading&#x22; aria-live=&#x22;polite&#x22; role=&#x22;status&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;p class=&#x22;govuk-body loading-text&#x22;&#x3E;Please wait while we load details&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;
+</code>
+</pre>
+      </div>
+    </details>
+    <!-- CSS -->
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          CSS
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+<pre>
+<code>
+.loading {
+  border: 12px solid #DEE0E2;
+  border-radius: 50%;
+  border-top-color: #005EA5;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  &#x26;-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &#x26;-text {
+    margin-top: 25px;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</code>
+</pre>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

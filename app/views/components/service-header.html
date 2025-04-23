@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Service header" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <!-- NAVIGATION -->
+
+  <div class="govuk-grid-column-one-quarter">
+    <ul class="app-subnav__section">
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/loading-spinner">Loading spinner</a>
+      </li>
+      <li class="app-subnav__section-item">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/multi-file-upload">Multiple file upload</a>
+      </li>
+      <li class="app-subnav__section-item app-subnav__section-item--current">
+        <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/service-header">Service header</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="govuk-grid-column-three-quarters">
+    <span class="govuk-caption-l">Components</span>
+    <h1 class="govuk-heading-l">Service header</h1>
+    <br/>
+    <p class="govuk-body">
+      The header component is not necessarily a custom component we have built for the Garage but since there is many header designs across the designs systems, this page will showcase the headers the Garage uses to ensure consistency.
+    </p>
+    <br />
+    <!-- Component -->
+    <h2 class="govuk-heading-m">Standard header</h2>
+    <header data-module="govuk-header" class="dwp-header">
+      <div class="dwp-header__content govuk-width-container">
+        <div class="dwp-header__service-name">
+          <a href="#" class="dwp-header__link">Service name</a>
+        </div>
+        <nav class="dwp-header-navigation" aria-label="Primary">
+          <button type="button" class="dwp-header-navigation__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+          <ul id="navigation" class="dwp-header-navigation__list">
+            <li class="dwp-header-navigation__item">
+              <a href="#">
+                Item 1
+              </a>
+            </li>
+            <li class="dwp-header-navigation__item">
+              <a href="#">
+                Item 2
+              </a>
+            </li>
+            <li class="dwp-header-navigation__item">
+              <a href="#">
+                Item 3
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <br />
+    <!-- Details -->
+    <h3 class="govuk-heading-s">How to use</h3>
+    <a class="govuk-link govuk-link--no-visited-state" href="https://design-system.dwp.gov.uk/components/header-navigation">DWP header navigation component (opens in new tab)</a>
+  </div>
+</div>
+
+{% endblock %}
